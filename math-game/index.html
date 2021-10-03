@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Game</title>
+    
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body onload="gerarExpressao()">
+    
+    <div class="background-math">
+        <div class="expression-box">
+            <span>Selecione a resposta para a seguinte expressão:</span>
+            <div style="margin: 35px 0;" class="expression" id="expression">
+            </div>
+            <div>
+                <table class="table-options">
+                    <tr>
+                        <td onclick = "selecionarOpcao1()" class="options" id="opcao1">Opcao 1</td>
+                        <td onclick = "selecionarOpcao2()" class="options" id="opcao2">Opcao 2</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="confirm-button" id="confirmButtonStyle">
+                <button style="margin-top: 15px;" onclick="gerarScore()" onmouseover="focusConfirm()" onmouseout="outConfirm()" type="button" id="confirmButton">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
